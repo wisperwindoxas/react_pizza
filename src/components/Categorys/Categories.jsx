@@ -4,18 +4,24 @@ import React from 'react'
 
 const Categories = ({onClick}) => {
 
-    const [category,] = React.useState([
+    const category = [
         'Все',
         'Мясные',
         'Вегетарианская',
         'Гриль',
         'Острые',
         'Закрытые',
-    ])
+    ]
+    const sorts = ['популярности', 'цене', 'алфавиту']
 
     const [isActive, setIsActive] = React.useState(0)
     const [showSort, setShowSort] = React.useState(false)
+    const [sort, setSort] = React.useState(0)
 
+    const showSortMenu = (index) => {
+        setSort(index)
+        setShowSort(false)
+    }
 
     return(
         <div className="content__top">
@@ -24,18 +30,19 @@ const Categories = ({onClick}) => {
 
                     {category.map((item,index) => {
                         return <li
-                            key={item}
+                            key={(item)}
                             onClick={() => setIsActive(index)}
-                            className={isActive === index ? 'active': "" }
+                            className={isActive  === index ? 'active': "" }
                             >
                             {item}
                         </li>
                     })}
                 </ul>
             </div>
-            <div className="sort">
-                <div className="sort__label">
-                    <svg
+            <div className={"sort"}>
+                <div className={"sort__label"}>
+                        <svg
+                            style={showSort ? {transform:"rotate(180deg)"}: {transform:"rotate(0deg)"}}
                         width="10"
                         height="6"
                         viewBox="0 0 10 6"
@@ -48,13 +55,19 @@ const Categories = ({onClick}) => {
                         />
                     </svg>
                     <b>Сортировка по:</b>
-                    <span onClick={() => setShowSort(!showSort)}>популярности</span>
+                    <span onClick={() => setShowSort(!showSort)}>{sorts[sort]}</span>
                 </div>
                 <div className={showSort ? 'sort__popup' : "display_none"}>
                     <ul>
-                        <li className="active">популярности</li>
-                        <li>цене</li>
-                        <li>алфавиту</li>
+                        {sorts.map((item, index) => {
+                            return(
+                                <li
+                                    key={item}
+                                    onClick={() => showSortMenu(index)}
+                                    className={sort === index ? "active": ""}
+                                >{item}</li>
+                            )
+                        })}
                     </ul>
                 </div>
             </div>

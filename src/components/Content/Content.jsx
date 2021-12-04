@@ -2,7 +2,28 @@ import React from 'react'
 import Categories from "../Categorys/Categories";
 
 
+
+
 function Content(){
+
+    const [fetData, setFetchData] = React.useState([])
+
+    React.useEffect(() =>{
+        async function fetPizzaData () {
+             await fetch('http://localhost:3004/pizza')
+                 .then(response => response.json())
+                 .then(data =>setFetchData(data))
+
+
+        }
+
+        return fetPizzaData
+    }, [])
+
+    setTimeout(() => {
+        console.log(fetData)
+    }, 3000)
+
     return(
         <div className="content">
             <div className="container">
@@ -50,10 +71,10 @@ function Content(){
                     <div className="pizza-block">
                         <img
                             className="pizza-block__image"
-                            src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                            src="https://dodopizza-a.akamaihd.net/static/Img/Products/cbaea8960cf74534886d295f3450b5d8_292x292.jpeg"
                             alt="Pizza"
                         />
-                        <h4 className="pizza-block__title">Чизбургер-пицца</h4>
+                        <h4 className="pizza-block__title">Пицца "Диабло"</h4>
                         <div className="pizza-block__selector">
                             <ul>
                                 <li className="active">тонкое</li>
@@ -89,10 +110,10 @@ function Content(){
                     <div className="pizza-block">
                         <img
                             className="pizza-block__image"
-                            src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                            src="https://dodopizza-a.akamaihd.net/static/Img/Products/270045efc717432cab468a31398254c1_292x292.png"
                             alt="Pizza"
                         />
-                        <h4 className="pizza-block__title">Чизбургер-пицца</h4>
+                        <h4 className="pizza-block__title">Пикант</h4>
                         <div className="pizza-block__selector">
                             <ul>
                                 <li className="active">тонкое</li>
@@ -128,10 +149,10 @@ function Content(){
                     <div className="pizza-block">
                         <img
                             className="pizza-block__image"
-                            src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                            src="https://dodopizza-a.akamaihd.net/static/Img/Products/3f81302ba956403b82bcc5d7366c74c9_292x292.jpeg"
                             alt="Pizza"
                         />
-                        <h4 className="pizza-block__title">Чизбургер-пицца</h4>
+                        <h4 className="pizza-block__title">Чиззи чеддер</h4>
                         <div className="pizza-block__selector">
                             <ul>
                                 <li className="active">тонкое</li>
@@ -167,10 +188,10 @@ function Content(){
                     <div className="pizza-block">
                         <img
                             className="pizza-block__image"
-                            src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                            src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/a376f042-1454-48ba-ba3f-74bb65102703.jpg"
                             alt="Pizza"
                         />
-                        <h4 className="pizza-block__title">Чизбургер-пицца</h4>
+                        <h4 className="pizza-block__title">Маргарита</h4>
                         <div className="pizza-block__selector">
                             <ul>
                                 <li className="active">тонкое</li>
@@ -206,10 +227,10 @@ function Content(){
                     <div className="pizza-block">
                         <img
                             className="pizza-block__image"
-                            src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                            src="https://dodopizza-a.akamaihd.net/static/Img/Products/3c9cdc01a9cf4215bd621562041c9d66_292x292.png"
                             alt="Pizza"
                         />
-                        <h4 className="pizza-block__title">Чизбургер-пицца</h4>
+                        <h4 className="pizza-block__title">Додо</h4>
                         <div className="pizza-block__selector">
                             <ul>
                                 <li className="active">тонкое</li>
@@ -245,10 +266,10 @@ function Content(){
                     <div className="pizza-block">
                         <img
                             className="pizza-block__image"
-                            src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                            src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/c4ec493d-50dc-47df-92dc-2e91531db4e9.jpg"
                             alt="Pizza"
                         />
-                        <h4 className="pizza-block__title">Чизбургер-пицца</h4>
+                        <h4 className="pizza-block__title">Четыре сезона</h4>
                         <div className="pizza-block__selector">
                             <ul>
                                 <li className="active">тонкое</li>
@@ -284,10 +305,10 @@ function Content(){
                     <div className="pizza-block">
                         <img
                             className="pizza-block__image"
-                            src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                            src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/bc3b869b-c626-4773-8586-d6f3da6e4f96.jpg"
                             alt="Pizza"
                         />
-                        <h4 className="pizza-block__title">Чизбургер-пицца</h4>
+                        <h4 className="pizza-block__title">Мясная</h4>
                         <div className="pizza-block__selector">
                             <ul>
                                 <li className="active">тонкое</li>
@@ -323,10 +344,10 @@ function Content(){
                     <div className="pizza-block">
                         <img
                             className="pizza-block__image"
-                            src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+                            src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/20cb7e4f-58da-466b-a269-1c1b8b9bdb3a.jpg"
                             alt="Pizza"
                         />
-                        <h4 className="pizza-block__title">Чизбургер-пицца</h4>
+                        <h4 className="pizza-block__title">4 сыра</h4>
                         <div className="pizza-block__selector">
                             <ul>
                                 <li className="active">тонкое</li>

@@ -1,0 +1,41 @@
+{
+  "pizza": [
+    {
+      "img": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg",
+      "name": "Чизбургер-пицца",
+      "price": "395"
+    },    {
+      "img": "https://dodopizza-a.akamaihd.net/static/Img/Products/cbaea8960cf74534886d295f3450b5d8_292x292.jpeg",
+      "name": "Пицца \"Диабло\"",
+      "price": "395"
+    },    {
+      "img": "https://dodopizza-a.akamaihd.net/static/Img/Products/270045efc717432cab468a31398254c1_292x292.png",
+      "name": "Пикант",
+      "price": "395"
+    },    {
+      "img": "https://dodopizza-a.akamaihd.net/static/Img/Products/3f81302ba956403b82bcc5d7366c74c9_292x292.jpeg",
+      "name": "Чиззи чеддер",
+      "price": "395"
+    },    {
+      "img": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/a376f042-1454-48ba-ba3f-74bb65102703.jpg",
+      "name": "Маргарита",
+      "price": "395"
+    },    {
+      "img": "https://dodopizza-a.akamaihd.net/static/Img/Products/3c9cdc01a9cf4215bd621562041c9d66_292x292.png",
+      "name": "Додо",
+      "price": "395"
+    },    {
+      "img": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/c4ec493d-50dc-47df-92dc-2e91531db4e9.jpg",
+      "name": "Четыре сезона",
+      "price": "395"
+    },    {
+      "img": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/bc3b869b-c626-4773-8586-d6f3da6e4f96.jpg",
+      "name": "Мясная",
+      "price": "395"
+    } , {
+      "img": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/20cb7e4f-58da-466b-a269-1c1b8b9bdb3a.jpg",
+      "name": "4 сыра",
+      "price": "395"
+    }
+  ]
+}
