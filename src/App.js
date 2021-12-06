@@ -1,12 +1,17 @@
 import './App.scss';
-import Header from "./components/Header/Header";
-import Content from "./components/Content/Content";
-
+import {Route,Routes} from 'react-router-dom'
+import Cart from "./components/Cart/Cart";
+import AllComponent from "./AllComponent";
 function App() {
   return (
       <div className="wrapper">
-        <Header/>
-        <Content/>
+
+
+            <Routes>
+                <Route path={'/'} element={<AllComponent/>}  exact/>
+                <Route path={'/cart'} element={<Cart/>} excat />
+            </Routes>
+
       </div>
   );
 }
