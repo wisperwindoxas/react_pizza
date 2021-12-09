@@ -1,21 +1,33 @@
 import React, {useState} from 'react'
 import classNames from "classnames";
-function Pizza_Block({imageUrl,name, price, types, sizes}){
+import PropsTypes from 'prop-types'
+import Loading from "./Loading";
 
-    console.log(`${name} : ${types}`)
+
+function PizzaBlock({imageUrl,name, price, types, sizes, isLoading}){
+
     const typeName = ['тонкое', 'традиционное'];
     const availableSize = [26,30, 40];
 
 
     const [activeType, setActiveType] = useState(types[0])
     const [sizeType, setSizeType] = useState(sizes[0])
+
+
+
+
+
     return(
         <div  className="pizza-block">
-            <img
-                className="pizza-block__image"
-                src={imageUrl}
-                alt="Pizza"
-            />
+            {!isLoading ?    <Loading/> :
+                <img
+                    className="pizza-block__image"
+                    src={imageUrl}
+                    alt="Pizza"
+                />
+            }
+
+
             <h4 className="pizza-block__title">{name}</h4>
             <div className="pizza-block__selector">
                 <ul>
@@ -69,7 +81,16 @@ function Pizza_Block({imageUrl,name, price, types, sizes}){
 }
 
 
-export default Pizza_Block;
+PizzaBlock.propTypes = {
+    name: PropsTypes.string.isRequired,
+    imageUrl:PropsTypes.string.isRequired,
+    price:PropsTypes.number.isRequired,
+    types:PropsTypes.arrayOf(PropsTypes.number).isRequired,
+    sizes:PropsTypes.arrayOf(PropsTypes.number).isRequired
+
+}
+
+export default PizzaBlock;
 
 
 

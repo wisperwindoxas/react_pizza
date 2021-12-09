@@ -99,6 +99,26 @@
       "price": 285,
       "category": 5,
       "rating": 7
+    },
+    {
+      "id": 10,
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/1cd986c075b5494a852afc5d5c67d0c4_292x292.jpeg",
+      "name": "Деревенская",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 485,
+      "category": 5,
+      "rating": 7
+    } ,
+    {
+      "id": 11,
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/ad6ed792-6010-424f-ac14-98a0a7154485.jpg",
+      "name": "Двойная пепперони",
+      "types": [1],
+      "sizes": [26,  40],
+      "price": 605,
+      "category": 5,
+      "rating": 7
     }
   ]
 }
